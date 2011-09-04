@@ -3,3 +3,40 @@
 }
 
 <h2>Editor</h2>
+<p>CLEditor bruger et standard textarea og laver det om til en "rich text editor", for at bruge CLEditor skal man bare
+ved document ready kalde <code>$(element).cleditor()</code> og man er kørende.</p>
+<div style="float:left;width:550px;">
+<textarea id="input" name="input"></textarea>
+<a href="#" id="submit">Submit</a>
+</div>
+
+<div id="update" style="float:left;"></div>
+<div style="clear:both;"></div>
+<p>Når det er gjort bliver en iframe sat ind som bliver holdt i sync med det textarea som man har lavet. Man kan altid tilgå
+indholdet i editoren ved at kalde indholdet i textarea, også ved server side events.</p>
+<p>Der er massere af muligheder for at lave lige den editor man har brug for, med et hav at parameters man kan kalde når editoren bliver initialiseret.</p>
+<p>width:        500, // width not including margins, borders or padding</p>
+<p>height:       250, // height not including margins, borders or padding</p>
+<p>controls:     // controls to add to the toolbar</p>
+<p>colors:       // colors in the color popup</p>
+<p>fonts:        // font names in the font popup</p>
+<p>sizes:        // sizes in the font size popup</p>
+<p>styles:       // styles in the style popup</p>
+<p>useCSS:       false, // use CSS to style HTML when possible (not supported in ie)</p>
+<p>docType:      // Document type contained within the editor</p>
+<p>docCSSFile:   // CSS file used to style the document contained within the editor</p>
+<p>bodyStyle:    // style to assign to document body contained within the editor</p>
+  
+  
+  <link rel="stylesheet" type="text/css" href="/Scripts/plugins/cleditor/jquery.cleditor.css" />
+  <script type="text/javascript" src="/Scripts/plugins/cleditor/jquery.cleditor.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#input").cleditor();
+        $("#submit").click(function () {
+            var val = $("#input").val();
+            $("#update").html(val);
+            return false;
+        });
+    });    
+</script>
