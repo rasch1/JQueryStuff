@@ -1,0 +1,22 @@
+﻿@{
+    ViewBag.Title = "SlidingPage";
+}
+
+<script src="../../Scripts/plugins/pageSlide.js" type="text/javascript"></script>
+<h2>SlidingPage</h2>
+<div id="content">
+        <div id="header">
+          <p>JQuery sliding page demo(plugins(PageSlide)). Lej med linksene og se hvad der sker, det er ret coolt.</p>
+          <p>For at lukke slide igen bare tryk et sted på den normale body</p>
+        </div>
+        <ul>
+          <li><a href="/left" id="slide-left">Flyt siden til venstre</a></li>
+          <li><a href="/right" id="slide-right">Flyt siden til højre</a></li>
+          <li><a href="/modal" id="slide-modal">Flyt siden med modal = true</a></li>
+        </ul>
+      </div>
+  <script type="text/javascript">
+      $("#slide-left").pageSlide({ width: "350px", direction: "left" });
+      $("#slide-right").pageSlide({ width: "350px", direction: "right" });
+      $("#slide-modal").pageSlide({ width: "350px", direction: "left", modal: true });
+  </script>

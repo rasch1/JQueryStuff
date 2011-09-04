@@ -1,0 +1,64 @@
+﻿@{
+    ViewBag.Title = "Fading";
+}
+
+<h2>jQuery fadeIn(), fadeOut() and fadeTo() example</h2>
+
+<div class="clear">
+	<h3>fadeOut() example</h3>
+	
+	<div class="fadeOutbox">
+		Click me - fadeOut()
+	</div>
+	
+	<div class="fadeOutbox">
+		Click me - fadeOut()
+	</div>
+</div>
+
+<div class="clear">
+	<h3>fadeIn() example</h3>
+	
+	<div class="fadeInbox">
+		Click me - fadeIn()
+	</div>
+	
+	<div class="fadeInbox">
+		Click me - fadeIn()
+	</div>
+</div>
+
+<div class="clear">
+	<h3>fadeTo() example</h3>
+	
+	<div class="fadeTobox">
+		Click me - fadeTo()
+	</div>
+	
+	<div class="fadeTobox">
+		Click me - fadeTo()
+	</div>
+</div>
+
+
+<div class="clear">
+	<button id=reset>Reset</button>
+</div>
+<script type="text/javascript">
+
+    $(".fadeOutbox").click(function () {
+        $(this).fadeOut('slow');
+    });
+
+    $(".fadeInbox").click(function () {
+        $(this).hide().fadeIn(2000);
+    });
+
+    $(".fadeTobox").click(function () {
+        $(this).fadeTo('fast', 0.2);
+    });
+
+    $("#reset").click(function () {
+        location.reload();
+    });
+</script>

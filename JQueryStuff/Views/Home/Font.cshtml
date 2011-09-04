@@ -1,0 +1,33 @@
+﻿@{
+    ViewBag.Title = "Playing with text in jQuery";
+}
+<script src="../../Scripts/plugins/jquery-fonteffect-1.0.0.min.js" type="text/javascript"></script>
+<h2>At Leje med tekster.</h2>
+<style>
+#example,#example1, #example2, #example3, #example4 {
+    font-family: Impact;
+    color: #000;
+    font-size: 38px;
+}
+#example3 {
+    margin-bottom: 30px;
+}
+</style>
+<p>Basic example</p>
+<div id="example">jQuery related stuff – Basic</div>
+<p>Skygger</p>
+<div id="example1">jQuery related stuff – Shadowed</div>
+<p>Gradienter</p>
+<div id="example2">jQuery related stuff– Gradiented</div>
+<p>Spejl refleks</p>
+<div id="example3">jQuery related stuff – Mirrored</div>
+<p>Outline</p>
+<div id="example4">jQuery related stuff – Outlined</div>
+<script type="text/javascript">
+        $("#example1").FontEffect({ shadow: true, shadowColor: "#000", shadowOffsetTop: 15 });
+        $("#example2").FontEffect({ gradient: true });
+        $("#example3").FontEffect({ mirror: true, mirrorHeight: 80 });
+        $("#example4").FontEffect({ outline: true, outlineColor1: "#fff", outlineColor2: "#000" });
+        $("#example").FontEffect();
+   
+</script>
